@@ -30,11 +30,31 @@ main {
 }
 
 aside {
+    display: block;
+    position: relative;
     margin: 7% 4% 0 0;
     width: 25%;
     float: right;
     border: 3.5px solid #392e3a;
     padding: 0 0 3% 1%;
+}
+
+aside::before {
+    content: "";
+    background-color: #EDBB68;
+    opacity: 0.5;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+div.aside_text {
+    position: relative;
 }
 
 main div.mamp_screenshots {
@@ -47,6 +67,7 @@ main div.mamp_screenshots {
     width: 90%;
     height: 20%;
     border: 3.5px solid #392e3a;
+    border-radius: 3px;
 }
 
 footer {
@@ -63,13 +84,14 @@ h1.portal,
 h1.portal a:link,
 h1.portal a:visited,
 main h2.about,
-aside h2.exercises {
+aside h2.exercises,
+body h4,
+ul.navigation li a {
     text-align: left;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
     font-style: italic;
     color: #392e3a;
-    background-color: #FBF7F4;
 }
 
 main h2.about {
@@ -85,6 +107,7 @@ h1.portal a:link,
 h1.portal a:visited {
     font-size: 1.75em;
     color: #392e3a;
+    margin-left: 20px;
 }
 
 aside ul li a:link,
@@ -105,22 +128,19 @@ h1.portal a:hover,
 ul.navigation li a:hover,
 aside ul li a:hover,
 aside ul li a:visited {
-    color: #D5B583;
+    color: #CCC;
 }
 
-ul.navigation li a,
 p.portal_p1,
-aside h4,
 footer p,
-aside>ul li a,
-div.mamp_screenshots h4 {
+aside li a {
     color: #392e3a;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
 }
 
 aside h4,
-aside>ul li a {
+aside ul li {
     text-align: left;
     margin-left: 20px;
 }
