@@ -1,39 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
-    <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <title>Home Page</title>
-
-</head>
-
-<body>
-    <header>
-        <div class="inner-header">
-            <a href="../index.php">
-                <img id="logo" src="images/php.svg" alt="logo"></img>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="../index.php">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">DAILY</a></li>
-                    <li><a href="">PROJECT</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li><a href="">GALLERY</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!---end inner header--->
-    </header>
-    <!---end header--->
+<?php
+   include('includes/header.php'); ?>
     <div id="wrapper">
         <div id="hero">
             <!--<img class="hero-image" src="images/hero1.svg" alt="sunrise"></img>-->
@@ -69,19 +35,5 @@
         <!---end aside--->
     </div>
     <!---end wrapper--->
-    <footer>
-        <ul>
-            <li>Copyright &copy;2022</li>
-            <li>All Rights Reserved</li>
-            <li><a href="../index.php">Web Design by Kelly Chapman</a></li>
-            <li><a id="html-checker" href="#">HTML Validation</a></li>
-            <li><a id="css-checker" href="#">CSS Validation</a></li>
-        </ul>
-        <script>
-            document.getElementById("html-checker").setAttribute("href", "https://validator.w3.org/nu/?doc=" + location.href);
-            document.getElementById("css-checker").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        </script>
-    </footer>
-</body>
-
-</html>
+   <?php
+   include('includes/footer.php'); ?>

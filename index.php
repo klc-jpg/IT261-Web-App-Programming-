@@ -13,12 +13,11 @@
     <title>My Portal Page!</title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
-
 <body>
     <!--WRAPPER START -->
     <div id="wrapper">
         <header>
-            <h1 class="portal"><a href="website/index.html">Kelly's Portal Page</a></h1>
+            <h1 class="portal"><a href="website/index.php">Kelly's Portal Page</a></h1>
             <nav>
                 <ul class="navigation">
                     <li><a href="">SWITCH</a></li>
@@ -49,9 +48,9 @@
                 <ul>
                     <li><a href="weeks/week2/var.php">&nbsp;&nbsp;&nbsp;Var</a></li>
                     <li><a href="weeks/week2/var2.php">&nbsp;&nbsp;&nbsp;Var Two</a></li>
-                  <!-- <li><a href="weeks/week2/currency-logic.php">&nbsp;&nbsp;&nbsp;Currency Logic</a></li>-->
+                    <!--<li><a href="weeks/week2/currency-logic.php">&nbsp;&nbsp;&nbsp;Currency Logic</a></li>-->
                     <li><a href="weeks/week2/currency.php">&nbsp;&nbsp;&nbsp;Currency</a></li>
-                   <!-- <li><a href="weeks/week2/heredoc.php">&nbsp;&nbsp;&nbsp;Heredoc</a></li>-->
+                    <!--<li><a href="weeks/week2/heredoc.php">&nbsp;&nbsp;&nbsp;Heredoc</a></li>-->
                 </ul>
                 <br>
                 <h4>WEEK THREE</h4>
