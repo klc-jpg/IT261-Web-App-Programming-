@@ -5,7 +5,7 @@
             <!--<img class="hero-image" src="images/hero1.svg" alt="sunrise"></img>-->
         </div>
         <!---end div hero--->
-        <main>
+        <main id="main_home">
             <div class="main_text">
                 <h1>Welcome to our Web App Programming class!</h1><br>
                 <h2>We are going to learn PHP!</h2>

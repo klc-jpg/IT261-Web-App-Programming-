@@ -1,11 +1,10 @@
 <?php
-
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 switch(THIS_PAGE) {
     case 'index.php';
     $title = 'website project home page';
-    $body = 'home';
+    $body = 'home inner';
     break;
 
     case 'about.php';
@@ -14,7 +13,7 @@ switch(THIS_PAGE) {
     break;
 
     case 'daily.php';
-    $title = 'website project daily page';
+    $title = 'daily page for website project';
     $body = 'daily inner';
     break;
 
@@ -33,20 +32,9 @@ switch(THIS_PAGE) {
     $body = 'gallery inner';
     break;
 }
-//our nav array
-$nav = array(
-    'index.php' => 'HOME',
-        'about.php' => 'ABOUT',
-            'daily.php' => 'DAILY',
-                'project.php' => 'PROJECT',
-                    'contact.php' => 'CONTACT',
-                        'gallery.php' => 'GALLERY',
-);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +50,7 @@ $nav = array(
     <header>
         <div class="inner-header">
             <a href="../index.php">
-                <img id="logo" src="images/php.svg" alt="logo"></img>
+                <img id="logo" src="images/php.png" alt="logo"></img>
             </a>
             <!--<nav>
                 <ul>
@@ -72,22 +60,30 @@ $nav = array(
                     <li><a href="">PROJECT</a></li>
                     <li><a href="">CONTACT</a></li>
                     <li><a href="">GALLERY</a></li>
-                </ul>
-            </nav>-->
-            <nav>
-                <ul>
-                <?php
-                foreach($nav as $key => $value) {
-                    if(THIS_PAGE == $key) {
-                        echo '<li><a style="color: #EDBB68;" href="" '.$key.' ">'.$value.'</a></li>';
-                    } else {
-                        echo '<li><a style="color: #392e3a;" href="" '.$key.' ">'.$value.'</a></li>';
-                        }
-                    } //end foreach    
-                    ?>  
-                </ul>
+                         </ul>-->
+        <nav>
+        <?php
+        $nav = array(
+            'index.php' => 'HOME',
+                'about.php' => 'ABOUT',
+                    'daily.php' => 'DAILY',
+                        'project.php' => 'PROJECT',
+                            'contact.php' => 'CONTACT',
+                                'gallery.php' => 'GALLERY',
+        );      
+        echo '<ul>';
+            foreach($nav as $key => $value) {
+                if($key == THIS_PAGE) {
+                    echo '<li><a style="color:#EDBB68;" href=" '.$key.' ">'.$value.'</a></li>';
+                } else {
+                    echo '<li><a style="color:#392e3a;" href=" '.$key.' ">'.$value.'</a></li>';
+                    }
+                }
+                //end foreach    
+        echo '</ul>';
+        ?>
             </nav>
         </div>
         <!---end inner header--->
     </header>
-    <!---end header--->
+  <!---end header--->

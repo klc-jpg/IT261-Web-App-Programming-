@@ -20,7 +20,7 @@
             <h1 class="portal"><a href="website/index.php">Kelly's Portal Page</a></h1>
             <nav>
                 <ul class="navigation">
-                    <li><a href="">SWITCH</a></li>
+                    <li><a href="website/daily.php">SWITCH</a></li>
                     <li><a href="">TROUBLESHOOT</a></li>
                     <li><a href="">CALCULATOR</a></li>
                     <li><a href="">EMAIL</a></li>
