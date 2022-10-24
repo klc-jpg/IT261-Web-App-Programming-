@@ -1,0 +1,118 @@
+/*My form styles week 4*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FBF7F4;
+}
+
+form {
+    display: inline-block;
+    width: 30%;
+    margin: 1% 1% 10px 22%;
+    padding: 3%;
+    background-color: #56c4c1;
+    border: 3px solid #392e3a;
+    border-radius: 3px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    border: none;
+}
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+input[type=submit] {
+    width: auto;
+    color: #392e3a;
+    background-color: #f2f2f2;
+    padding: 1.5%;
+    border: 0.5px solid #ccc;
+}
+
+div.box h2.hello,
+h1,
+form a {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #392e3a;
+}
+
+p.comments,
+.thanks,
+label,
+.box ul li,
+p.celcius {
+    color: #392e3a;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+}
+
+.box ul li {
+    list-style-type: none;
+    margin-left: 5%;
+}
+
+h1:not(h1.cel) {
+    margin: 2% 5%;
+    text-align: left;
+}
+
+h1.cel {
+    margin: 2% 5%;
+    text-align: center;
+}
+
+p.error {
+    color: #d9381e;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+    margin: 10% 13% 0 5px;
+    float: right;
+}
+
+div.box,
+div.boxOne {
+    max-width: 31%;
+    float: right;
+    background-color: #EDBB68;
+    padding: 3%;
+    border: 3px solid #392e3a;
+}
+
+div.box {
+    margin: 12% 15% 0 1%;
+}
+
+div.boxOne {
+    margin: 3% 15% 0 1%;
+}
+
+form a {
+    display: block;
+    float: right;
+    text-decoration: none;
+}

@@ -61,6 +61,16 @@
                     <li><a href="weeks/week3/foreach.php">&nbsp;&nbsp;&nbsp;For Each</a></li>
                     <li><a href="weeks/week3/switch.php">&nbsp;&nbsp;&nbsp;Switch</a></li>
                 </ul>
+                <br>
+                <h4>WEEK FOUR</h4>
+                <ul>
+                <li><a href="weeks/week4/form-get.php">&nbsp;&nbsp;&nbsp;Form Get</a></li>
+                    <li><a href="weeks/week4/form1.php">&nbsp;&nbsp;&nbsp;Form One</a></li>
+                    <li><a href="weeks/week4/form2.php">&nbsp;&nbsp;&nbsp;Form Two</a></li>
+                    <li><a href="weeks/week4/form3.php">&nbsp;&nbsp;&nbsp;Form Three</a></li>
+                    <li><a href="weeks/week4/arithmetic-form.php">&nbsp;&nbsp;&nbsp;Arithmetic Form</a></li>
+                    <li><a href="weeks/week4/celcius.php">&nbsp;&nbsp;&nbsp;Celcius</a></li>
+                </ul>
             </div>
             <!--end aside_text-->
         </aside>
