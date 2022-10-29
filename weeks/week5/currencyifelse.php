@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
-    <title>Currency Three: Sticky Form</title>
+    <title>Currency if/else</title>
     <link href="css/ifelsestyles.css" type="text/css" rel="stylesheet">
 <body>
 <div id="wrapper">
@@ -100,7 +100,8 @@ elseif($dollars > 50) {
 }//end ifelse
 
 } //end isset
-}//end server request?>
+}//end server request
+?>
 </div>
 <footer>
 <hr>
