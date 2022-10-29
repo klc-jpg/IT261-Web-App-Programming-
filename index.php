@@ -71,6 +71,15 @@
                     <li><a href="weeks/week4/arithmetic-form.php">&nbsp;&nbsp;&nbsp;Arithmetic Form</a></li>
                     <li><a href="weeks/week4/celcius.php">&nbsp;&nbsp;&nbsp;Celcius</a></li>
                 </ul>
+                <br>
+                <h4>WEEK FIVE</h4>
+                <ul>
+                <li><a href="weeks/week5/currency1.php">&nbsp;&nbsp;&nbsp;Currency One</a></li>
+                    <li><a href="weeks/week5/currency2.php">&nbsp;&nbsp;&nbsp;Currency Two</a></li>
+                    <li><a href="weeks/week5/currency3.php">&nbsp;&nbsp;&nbsp;Currency Three</a></li>
+                    <li><a href="weeks/week5/null.php">&nbsp;&nbsp;&nbsp;NULL</a></li>
+                    <li><a href="weeks/week5/currencyifelse.php">&nbsp;&nbsp;&nbsp;Currency if/else</a></li>
+                </ul>
             </div>
             <!--end aside_text-->
         </aside>
