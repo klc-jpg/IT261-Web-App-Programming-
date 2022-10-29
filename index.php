@@ -22,7 +22,7 @@
                 <ul class="navigation">
                     <li><a href="website/daily.php">SWITCH</a></li>
                     <li><a href="adder.php">TROUBLESHOOT</a></li>
-                    <li><a href="">CALCULATOR</a></li>
+                    <li><a href="calculator.php">CALCULATOR</a></li>
                     <li><a href="">EMAIL</a></li>
                     <li><a href="">DATABASE</a></li>
                     <li><a href="">GALLERY</a></li>
