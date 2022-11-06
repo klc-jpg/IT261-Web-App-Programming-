@@ -80,6 +80,14 @@
                     <li><a href="weeks/week5/null.php">&nbsp;&nbsp;&nbsp;NULL</a></li>
                     <li><a href="weeks/week5/currencyifelse.php">&nbsp;&nbsp;&nbsp;Currency if/else</a></li>
                 </ul>
+                <br>
+                <h4>WEEK SIX</h4>
+                <ul>
+                <li><a href="weeks/week6/form.php">&nbsp;&nbsp;&nbsp;Form One</a></li>
+                    <li><a href="weeks/week6/form2.php">&nbsp;&nbsp;&nbsp;Form Two</a></li>
+                    <li><a href="weeks/week6/functions.php">&nbsp;&nbsp;&nbsp;Functions</a></li>
+                    <li><a href="weeks/week6/thx.php">&nbsp;&nbsp;&nbsp;Thx</a></li>
+                </ul>
             </div>
             <!--end aside_text-->
         </aside>

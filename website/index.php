@@ -1,5 +1,6 @@
 <?php
-   include('includes/header.php'); ?>
+ include('config.php'); 
+    include('./includes/header.php');?>
     <div id="wrapper">
         <div id="hero">
             <!--<img class="hero-image" src="images/hero1.svg" alt="sunrise"></img>-->
