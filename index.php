@@ -48,9 +48,7 @@
                 <ul>
                     <li><a href="weeks/week2/var.php">&nbsp;&nbsp;&nbsp;Var</a></li>
                     <li><a href="weeks/week2/var2.php">&nbsp;&nbsp;&nbsp;Var Two</a></li>
-                    <!--<li><a href="weeks/week2/currency-logic.php">&nbsp;&nbsp;&nbsp;Currency Logic</a></li>-->
                     <li><a href="weeks/week2/currency.php">&nbsp;&nbsp;&nbsp;Currency</a></li>
-                    <!--<li><a href="weeks/week2/heredoc.php">&nbsp;&nbsp;&nbsp;Heredoc</a></li>-->
                 </ul>
                 <br>
                 <h4>WEEK THREE</h4>
@@ -64,7 +62,7 @@
                 <br>
                 <h4>WEEK FOUR</h4>
                 <ul>
-                <li><a href="weeks/week4/form-get.php">&nbsp;&nbsp;&nbsp;Form Get</a></li>
+                    <li><a href="weeks/week4/form-get.php">&nbsp;&nbsp;&nbsp;Form Get</a></li>
                     <li><a href="weeks/week4/form1.php">&nbsp;&nbsp;&nbsp;Form One</a></li>
                     <li><a href="weeks/week4/form2.php">&nbsp;&nbsp;&nbsp;Form Two</a></li>
                     <li><a href="weeks/week4/form3.php">&nbsp;&nbsp;&nbsp;Form Three</a></li>
@@ -74,7 +72,7 @@
                 <br>
                 <h4>WEEK FIVE</h4>
                 <ul>
-                <li><a href="weeks/week5/currency1.php">&nbsp;&nbsp;&nbsp;Currency One</a></li>
+                    <li><a href="weeks/week5/currency1.php">&nbsp;&nbsp;&nbsp;Currency One</a></li>
                     <li><a href="weeks/week5/currency2.php">&nbsp;&nbsp;&nbsp;Currency Two</a></li>
                     <li><a href="weeks/week5/currency3.php">&nbsp;&nbsp;&nbsp;Currency Three</a></li>
                     <li><a href="weeks/week5/null.php">&nbsp;&nbsp;&nbsp;NULL</a></li>
@@ -83,10 +81,18 @@
                 <br>
                 <h4>WEEK SIX</h4>
                 <ul>
-                <li><a href="weeks/week6/form.php">&nbsp;&nbsp;&nbsp;Form One</a></li>
+                    <li><a href="weeks/week6/form.php">&nbsp;&nbsp;&nbsp;Form One</a></li>
                     <li><a href="weeks/week6/form2.php">&nbsp;&nbsp;&nbsp;Form Two</a></li>
                     <li><a href="weeks/week6/functions.php">&nbsp;&nbsp;&nbsp;Functions</a></li>
                     <li><a href="weeks/week6/thx.php">&nbsp;&nbsp;&nbsp;Thx</a></li>
+                </ul>
+                <br>
+                <h4>WEEK SEVEN</h4>
+                <ul>
+                    <li><a href="weeks/week7/form3.php">&nbsp;&nbsp;&nbsp;Form Three</a></li>
+                    <li><a href="weeks/week7/strings.php">&nbsp;&nbsp;&nbsp;Strings</a></li>
+                    <li><a href="weeks/week7/pictures.php">&nbsp;&nbsp;&nbsp;Pictures</a></li>
+                    <li><a href="weeks/week7/rand.php">&nbsp;&nbsp;&nbsp;rand()</a></li>
                 </ul>
             </div>
             <!--end aside_text-->

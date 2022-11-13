@@ -24,19 +24,21 @@ body {
 }
 
 main {
-    margin: 1% 0 0 3%;
-    width: 65%;
+    margin: 1% 0 0 1%;
+    width: 72%;
+    height: auto;
     float: left;
 }
 
 aside {
     display: block;
     position: relative;
-    margin: 7% 5% 0 0;
-    width: 26%;
+    width: 24%;
     float: right;
     border: 3.5px solid #392e3a;
-    padding: 0 0 3% 1%;
+    padding: 1%;
+    height: auto;
+    margin-right: 2%;
 }
 
 aside::before {
@@ -62,9 +64,9 @@ main div.mamp_screenshots {
     flex-flow: column nowrap;
     align-content: start;
     align-items: center;
-    margin: 5% 10% 10% 3%;
-    padding: 3%;
-    width: 90%;
+    margin: 10% 10% 10% 2%;
+    padding: 2%;
+    width: 95%;
     height: 20%;
     border: 3.5px solid #392e3a;
     border-radius: 3px;
@@ -95,7 +97,7 @@ ul.navigation li a {
 }
 
 main h2.about {
-    margin: 20px 0 0 20px;
+    margin: 20px 0 0 24px;
 }
 
 aside h2.exercises {
@@ -119,8 +121,9 @@ aside ul li {
 
 p.portal_p1 {
     display: inline;
-    max-width: 60%;
-    margin: 5% 0 5% 2%;
+    max-width: 63%;
+    width: auto;
+    margin: 6% 0 3% 2%;
     float: left;
     text-align: justify;
 }
@@ -147,7 +150,7 @@ aside ul li {
 
 div.mamp_screenshots h4 {
     align-self: center;
-    padding: 1% auto;
+    margin-bottom: 1%;
 }
 
 
@@ -180,17 +183,17 @@ ul.navigation li a {
 /* img */
 
 main img.kelly {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     display: inline;
     float: left;
-    margin: 0 0 5% 3%;
+    margin: 0 0 3% 3%;
     border: 3.5px solid #392e3a;
 }
 
 main div img.mamp,
 main div img.mampError {
-    max-width: 90%;
+    max-width: 95%;
     height: auto;
 }

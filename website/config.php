@@ -2,6 +2,7 @@
 ob_start();
 
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
+
 switch(THIS_PAGE) {
     case 'index.php';
     $title = 'website project home page';
@@ -139,7 +140,7 @@ switch($today) {
     break;
 }
 
-//my form's php
+//form's PHP
 //define vars
 $first_name = '';
 $last_name = '';
@@ -181,13 +182,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $gender = $_POST['gender'];
     }
-
-    if(empty($_POST['phone'])) {
+    //if(empty($_POST['phone'])) {
+      //  $phone_err = 'Please add your phone number';
+    //} else {
+      //  $phone = $_POST['phone'];
+    //}
+    if(empty($_POST['phone'])) {            // if empty, type in your number
         $phone_err = 'Please add your phone number';
-    } else {
-        $phone = $_POST['phone'];
-    }
-
+        } elseif(array_key_exists('phone', $_POST)) {
+            if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {      // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format            
+                $phone_err = 'Invalid format!';
+        } else {
+            $phone = $_POST['phone'];
+        } // end else
+    } // end main if
+         
     if(empty($_POST['email'])) {
         $email_err = 'Email ID is required please';
     } else {
@@ -220,7 +229,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //start wines function
     function my_wines($wines) {
-        $my_return = '';
+        $my_return = ' ';
         if(!empty($_POST['wines'])) {
             $my_return = implode(', ', $_POST['wines']);
         } else {
@@ -240,7 +249,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['privacy'] )) {
 
     $to = 'kelly.chapman@seattlecolleges.edu';
-    $subject = 'Test Email on ' .date('m/d/y, h:i A');
+    $subject = 'Test email on ' .date('m/d/y, h:i A');
     $body = '
     First Name : '.$first_name.' '.PHP_EOL.'
     Last Name : '.$last_name.' '.PHP_EOL.'
@@ -249,17 +258,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     Phone : '.$phone.' '.PHP_EOL.'
     Region : '.$regions.' '.PHP_EOL.'
     Wines : '.my_wines($wines).' '.PHP_EOL.'
-    Comments : '.$comments.' '.PHP_EOL.'';
+    Comments : '.$comments.' '.PHP_EOL.' 
+    Privacy : '.$privacy.' '.PHP_EOL.' ';
 
     $headers = array(
-    'From' => 'noreply@kellychapman.xyz'   
+        'From' => 'noreply@kellychapman.xyz'
     );
 
-    if(!empty($first_name && $last_name && $email && $gender && $regions && $wines && $comments)) {
+    if(!empty($first_name && 
+                $last_name &&
+                    $email &&
+                        $gender && 
+                            $regions && 
+                                $wines && 
+                                    $comments &&
+                                        $phone &&
+                                            $privacy) &&
+                                                preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
         mail($to, $subject, $body, $headers); 
         header('Location:thx.php');
-        }// end if statement
+        }// end !empty if statement
     }//end isset
 }// end server request method
-
 

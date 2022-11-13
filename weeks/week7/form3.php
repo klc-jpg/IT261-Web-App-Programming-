@@ -23,10 +23,7 @@ $comment_err = '';
 $privacy_err = '';
 $regions_err = '';
 
-ob_start();
-
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     if(empty($_POST['first_name'])) {
         $first_name_err = 'Please fill out your first name';
     } else {
@@ -45,12 +42,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $gender = $_POST['gender'];
     }
 
-    if(empty($_POST['phone'])) {
-        $phone_err = 'Please add your phone number';
-    } else {
-        $phone = $_POST['phone'];
-    }
+    //if(empty($_POST['phone'])) {
+      //  $phone_err = 'Please add your phone number';
+    //} else {
+      //  $phone = $_POST['phone'];
+    //}
 
+    if(empty($_POST['phone'])) {            // if empty, type in your number
+        $phone_err = 'Please add your phone number';
+        } elseif(array_key_exists('phone', $_POST)) {
+            if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {      // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format            
+                $phone_err = 'Invalid format!';
+        } else {
+            $phone = $_POST['phone'];
+        } // end else
+    } // end main if
+         
     if(empty($_POST['email'])) {
         $email_err = 'Email ID is required please';
     } else {
@@ -83,7 +90,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //start wines function
     function my_wines($wines) {
-        $my_return = '';
+        $my_return = ' ';
         if(!empty($_POST['wines'])) {
             $my_return = implode(', ', $_POST['wines']);
         } else {
@@ -103,7 +110,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['privacy'] )) {
 
     $to = 'kelly.chapman@seattlecolleges.edu';
-    $subject = 'Test Email on ' .date('m/d/y, h:i A');
+    $subject = 'Test email on ' .date('m/d/y, h:i A');
     $body = '
     First Name : '.$first_name.' '.PHP_EOL.'
     Last Name : '.$last_name.' '.PHP_EOL.'
@@ -112,13 +119,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     Phone : '.$phone.' '.PHP_EOL.'
     Region : '.$regions.' '.PHP_EOL.'
     Wines : '.my_wines($wines).' '.PHP_EOL.'
-    Comments : '.$comments.' '.PHP_EOL.' ';
+    Comments : '.$comments.' '.PHP_EOL.' 
+    Privacy : '.$privacy.' '.PHP_EOL.' ';
 
     $headers = array(
         'From' => 'noreply@kellychapman.xyz'
     );
-  
-    if(!empty($first_name && $last_name && $email && $gender && $regions && $wines && $comments)) {
+
+    if(!empty($first_name && 
+                $last_name &&
+                    $email &&
+                        $gender && 
+                            $regions && 
+                                $wines && 
+                                    $comments &&
+                                        $phone &&
+                                            $privacy) &&
+                                                preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
         mail($to, $subject, $body, $headers); 
         header('Location:thx.php');
         }// end !empty if statement
@@ -134,8 +151,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
-    <title>Form One in Week Six</title>
-    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <title>Form Three in Week Seven -- Phone Validation</title>
+    <link href="../week6/css/styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div id="wrapper">
@@ -165,7 +182,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
              
                 <label>Phone</label>
                     <span class="error"><?php echo $phone_err ;?></span> 
-                        <input type="tel" name="phone" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>">
+                        <input type="tel" name="phone" placeholder=" xxx-xxx-xxxx" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>">
                  
                 <label>Favorite Wines (check all that apply)</label>
                     <span class="error"><?php echo $wines_err ;?></span> 

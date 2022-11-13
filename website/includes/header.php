@@ -16,16 +16,13 @@
     <header>
         <div class="inner-header">
             <a href="../index.php">
-                <img id="logo" src="images/php.png" alt="logo"></img>
-            </a>
-        <nav>
-        <ul>
-        <?php
-        echo make_links($nav);
-        ?>
-                </ul>
-            </nav>
-        </div>
+                <img id="logo" src="images/php.png" alt="logo"></img></a>
+                    <nav>
+                        <ul>
+                            <?php echo make_links($nav);?>
+                        </ul>
+                    </nav>
+                </div>
         <!---end inner header--->
     </header>
   <!---end header--->

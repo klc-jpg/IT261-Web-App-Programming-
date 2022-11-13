@@ -37,9 +37,6 @@ legend {
 form label {
     display: block;
     margin-bottom: 2px;
-    color: #CCC;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 input[type=text],
@@ -56,12 +53,13 @@ input[type=tel] {
 
 textarea {
     resize: none;
-    width: 85%;
+    width: 100%;
     height: 120px;
     margin-bottom: 10px;
     border-radius: 30px;
-    color: #ffffff;
+    background-color: #ffffff;
     border: 1px solid #000000;
+    color: #000000;
     padding: 4%;
 }
 
@@ -69,7 +67,6 @@ input[type=button] {
     padding: 2%;
     background-color: #6cc6a1;
     border: 0.5px solid #000000;
-    color: #392e3a;
     border-radius: 60px;
     width: 20%;
 }
@@ -80,7 +77,6 @@ input[type=submit] {
     display: block;
     background-color: #6cc6a1;
     border: 0.5px solid #000000;
-    color: #392e3a;
     padding: 2%;
     border-radius: 60px;
     margin-bottom: 10px;
@@ -118,25 +114,48 @@ form ul {
 input[type=radio],
 input[type=checkbox] {
     margin-left: 10px;
+    border: 0.5px solid #000000;
+}
+
+input.border {
+    border: 0.5px solid #000000;
 }
 
 
 /*Typography*/
 
-p a,
-ul li {
-    color: #ccc;
+ul li:not(input.border),
+textarea,
+option,
+input[type=text],
+input[type=email],
+input[type=tel] {
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+form label,
+li:not([type=checkbox]),
+li:not([type=radio]) {
+    color: #ccc;
+}
+
+textarea,
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+select option {
+    font-size: 1vw;
+    color: #000000;
+    font-weight: normal;
+}
+
 input[type=submit],
 input[type=button] {
-    /*font-weight: bold;*/
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: #392e3a;
 }
 
 h1.thanks {
@@ -146,7 +165,6 @@ h1.thanks {
 }
 
 form label,
-form a,
 span.error,
 h1,
 h2,
@@ -163,6 +181,6 @@ input[type=button] {
 span.error {
     color: #d9381e;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0 auto;
 }

@@ -1,7 +1,6 @@
 <?php
 include('config.php'); 
-include('./includes/header.php'); 
-?>
+include('./includes/header.php'); ?>
     <div id="wrapper">
         <div class="daily_hero">
             <img class="daily_img" src="images/<?php echo $pic;?>" alt="<?php echo $alt; ?>"></img>
@@ -34,8 +33,6 @@ include('./includes/header.php');
             <!---end aside_text--->
         </aside>
         <!---end aside--->
- 
     </div>
     <!---end wrapper--->
-   <?php
-include('includes/footer.php'); ?>
+   <?php include('includes/footer.php'); ?>

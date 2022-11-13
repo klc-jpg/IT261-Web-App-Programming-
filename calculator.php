@@ -100,7 +100,7 @@
     <div class="box">
     <h2> Hello <b>'.$name.',</b></h2>
     <p class="summary">You will be travelling a total of <b>'.number_format($time, 1).'</b> hours, over <b>'.number_format($days,1).'</b> days.
-    You will need <b>'.$gallons.'</b> gallons of gas to complete your trip, at a total cost of <b>$'.number_format($cost, 2).'</b> dollars.</p>
+    You will need <b>'.$gallons.'</b> gallons of gas to complete your trip, at a total cost of <b>'.number_format($cost, 2).'</b> dollars.</p>
     </div>
     ';
 }
