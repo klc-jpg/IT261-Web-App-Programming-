@@ -24,6 +24,11 @@ switch(THIS_PAGE) {
     $body = 'project inner';
     break;
 
+    case 'thx.php';
+    $title = 'thank you';
+    $body = 'thx inner';
+    break;
+
     case 'contact.php';
     $title = 'website project contact page';
     $body = 'contact inner';
@@ -140,31 +145,29 @@ switch($today) {
     break;
 }
 
-//form's PHP
+///form php
 //define vars
 $first_name = '';
 $last_name = '';
 $gender = '';
 $phone = '';
 $email = '';
-$wines = '';
+$food = '';
 $comment = '';
 $privacy = '';
-$regions = '';
+$age = '';
 
 //define error vars
 $first_name_err = '';
 $last_name_err = '';
-$gender_err = '';
 $phone_err = '';
 $email_err = '';
-$wines_err = '';
+$food_err = '';
 $comment_err = '';
 $privacy_err = '';
-$regions_err = '';
+$age_err = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     if(empty($_POST['first_name'])) {
         $first_name_err = 'Please fill out your first name';
     } else {
@@ -177,16 +180,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $last_name = $_POST['last_name'];
     }
 
-    if(empty($_POST['gender'])) {
-        $gender_err = 'Please select an option';
-    } else {
-        $gender = $_POST['gender'];
-    }
-    //if(empty($_POST['phone'])) {
-      //  $phone_err = 'Please add your phone number';
-    //} else {
-      //  $phone = $_POST['phone'];
-    //}
     if(empty($_POST['phone'])) {            // if empty, type in your number
         $phone_err = 'Please add your phone number';
         } elseif(array_key_exists('phone', $_POST)) {
@@ -196,17 +189,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $phone = $_POST['phone'];
         } // end else
     } // end main if
-         
+
     if(empty($_POST['email'])) {
-        $email_err = 'Email ID is required please';
+        $email_err = 'Please share your email ID';
     } else {
         $email = $_POST['email'];
-    }
-
-    if(empty($_POST['wines'])) {
-        $wines_err = 'What no wines?';
-    } else {
-        $wines = $_POST['wines'];
     }
 
     if(empty($_POST['comments'])) {
@@ -216,35 +203,38 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if(empty($_POST['privacy'])) {
-        $privacy_err = 'Please read and agree to our privacy policy';
+        $privacy_err = 'You must agree ';
     } else {
         $privacy = $_POST['privacy'];
     }
 
-    if($_POST['regions'] == NULL) {
-        $regions_err = 'Please select your region';
+    if($_POST['age'] == NULL) {
+        $age_err = 'Please select your age range';
     } else {
-        $regions = $_POST['regions'];
+        $age = $_POST['age'];
     }
 
-    //start wines function
-    function my_wines($wines) {
+    $food_err = 'Please select your favorite food';
+    $food = $_POST['food'];
+
+    //start food function
+    function my_food($food) {
+        $food_err = 'Please select your favorite food';
         $my_return = ' ';
-        if(!empty($_POST['wines'])) {
-            $my_return = implode(', ', $_POST['wines']);
+        if(sizeof($_POST['food']) == 0) {
+            $food_err ;
         } else {
-            $wines_err = 'Please select your favorite wines';
+            $my_return = implode(', ', $food);
+            return $my_return;
         }
-        return $my_return;
-    }//end wines function
+    }//end food function
 
     if(isset($_POST['first_name'],
     $_POST['last_name'],
     $_POST['email'],
-    $_POST['gender'],
     $_POST['phone'],
-    $_POST['wines'],
-    $_POST['regions'],
+    $_POST['age'],
+    $_POST['food'],
     $_POST['comments'],
     $_POST['privacy'] )) {
 
@@ -254,10 +244,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     First Name : '.$first_name.' '.PHP_EOL.'
     Last Name : '.$last_name.' '.PHP_EOL.'
     Email : '.$email.' '.PHP_EOL.'
-    Gender : '.$gender.' '.PHP_EOL.'
     Phone : '.$phone.' '.PHP_EOL.'
-    Region : '.$regions.' '.PHP_EOL.'
-    Wines : '.my_wines($wines).' '.PHP_EOL.'
+    Age : '.$age.' '.PHP_EOL.'
+    Food : '.my_food($food).' '.PHP_EOL.'                 
     Comments : '.$comments.' '.PHP_EOL.' 
     Privacy : '.$privacy.' '.PHP_EOL.' ';
 
@@ -268,16 +257,38 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($first_name && 
                 $last_name &&
                     $email &&
-                        $gender && 
-                            $regions && 
-                                $wines && 
-                                    $comments &&
-                                        $phone &&
-                                            $privacy) &&
-                                                preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
+                        $age && 
+                            $food && 
+                                $comments &&
+                                    $phone &&
+                                        $privacy) &&
+                                            preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
         mail($to, $subject, $body, $headers); 
         header('Location:thx.php');
         }// end !empty if statement
     }//end isset
 }// end server request method
+
+//rand() for webpage index 
+$photos[0] = 'hero1';
+$photos[1] = 'hero2';
+$photos[2] = 'hero3';
+$photos[3] = 'hero4';
+$photos[4] = 'hero5';
+
+$i = rand(0,4);
+$selected_image = ''.$photos[$i].'.png';
+
+function random_images($photos) {
+    $my_return = '';
+    $i = rand(0,4);
+    $selected_image = ''.$photos[$i].'.png';
+    $my_return = 'src="./images/'.$selected_image.'" alt="'.$photos[$i].'" ';
+    return $my_return;
+}//end function
+
+
+
+
+
 

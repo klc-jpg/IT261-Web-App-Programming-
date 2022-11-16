@@ -1,9 +1,9 @@
 <?php
  include('config.php'); 
-    include('./includes/header.php');?>
+   include('./includes/header.php');?>
     <div id="wrapper">
-        <div id="hero">
-            <!--<img class="hero-image" src="images/hero1.svg" alt="sunrise"></img>-->
+        <div id="home_hero">
+            <img class="hero-image"<?php echo random_images($photos);?>></img>
         </div>
         <!---end div hero--->
         <main id="main_home">
@@ -36,5 +36,5 @@
         <!---end aside--->
     </div>
     <!---end wrapper--->
-   <?php
-   include('includes/footer.php'); ?>
+<?php
+include('includes/footer.php'); ?>
