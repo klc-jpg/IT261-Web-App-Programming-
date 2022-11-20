@@ -94,6 +94,12 @@
                     <li><a href="weeks/week7/pictures.php">&nbsp;&nbsp;&nbsp;Pictures</a></li>
                     <li><a href="weeks/week7/rand.php">&nbsp;&nbsp;&nbsp;rand()</a></li>
                 </ul>
+                <br>
+                <h4>WEEK EIGHT</h4>
+                <ul>
+                    <li><a href="weeks/week8/people.php">&nbsp;&nbsp;&nbsp;People</a></li>
+                    <li><a href="weeks/week8/people-view.php">&nbsp;&nbsp;&nbsp;People-View</a></li>
+                </ul>
             </div>
             <!--end aside_text-->
         </aside>

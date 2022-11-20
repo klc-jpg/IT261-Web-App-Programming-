@@ -1,0 +1,134 @@
+/*styles for my people and people view exercise*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    list-style-type: none;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+#wrapper {
+    max-width: 1200px;
+    width: 98%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #FBF7F4;
+    padding: 3%;
+    border: 3px solid #392e3a;
+    border-radius: 3px;
+}
+
+main {
+    display: block;
+    float: left;
+    width: 62%;
+}
+
+aside {
+    display: inline;
+    float: right;
+    width: 35%;
+    padding: 1.5%;
+}
+
+.aside-image {
+    display: block;
+    border-radius: 3px;
+    max-width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 35%;
+    border: 2px solid #392e3a;
+}
+
+img.prez {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    border: 2px solid #392e3a;
+}
+
+.heading {
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+ul.people li {
+    margin-left: 10px;
+}
+
+ul.details {
+    margin-top: 20px;
+}
+
+ul.details li {
+    line-height: 1.6;
+}
+
+footer {
+    height: 60px;
+    line-height: 60px;
+    background: #FBF7F4;
+    clear: both;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    display: flex;
+    justify-content: center;
+    margin: 0 15px;
+    list-style-type: none;
+}
+
+footer li a {
+    text-decoration: none;
+}
+
+
+/*Typography*/
+
+h1,
+h2,
+h3,
+h4,
+aside ul li,
+aside figcaption {
+    text-decoration: none;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #392e3a;
+}
+
+footer,
+p,
+ul li,
+ul li a {
+    color: #392e3a;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+}
+
+p a:link,
+p a:visited {
+    color: #392e3a;
+}
