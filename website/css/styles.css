@@ -231,7 +231,8 @@ h1,
 h2,
 h3,
 h4,
-aside ul li {
+aside ul li,
+td {
     text-decoration: none;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
@@ -463,4 +464,75 @@ span.error {
     text-align: center;
     font-size: 1.2em;
     margin: 0 auto;
+}
+
+
+/*gallery table styles */
+
+div.np_table {
+    width: 90%;
+    margin: 1% auto 2%;
+    position: relative;
+    border-radius: 5px;
+}
+
+table.national {
+    display: block;
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+}
+
+div.np_table::before {
+    content: "";
+    background-color: #EDBB68;
+    opacity: 0.5;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+table.national th,
+table.national td {
+    border: 3px solid #392e3a;
+}
+
+table.national td:not(td.np) {
+    font-size: 1.2em;
+    color: #392e3a;
+    padding: 8px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+td.np img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+td.np {
+    width: 70%;
+    height: auto;
+    padding: 1%;
+}
+
+#parks {
+    margin: 2% 0 1% 0;
+    width: 100%;
+}
+
+#parks h1 {
+    text-align: center;
 }

@@ -287,6 +287,16 @@ function random_images($photos) {
     return $my_return;
 }//end function
 
+//gallery array
+$parks = array();
+$parks['Grand_Canyon'] = 'grand_Located in Arizona, established 1919.';
+$parks['Bryce_Canyon'] = 'bryce_Located in Utah, established 1928.';
+$parks['Joshua_Tree'] = 'joshu_Located in California, established 1994.';
+$parks['Olympic_NP'] = 'olymp_Located in Washington, established 1938.';
+$parks['Yellowstone_NP'] = 'yello_Located in Montana, Wyoming and Idaho; established 1919.';
+
+?>
+
 
 
 
