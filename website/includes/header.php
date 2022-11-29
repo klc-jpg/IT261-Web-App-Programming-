@@ -15,8 +15,8 @@
 <body class="<?php echo $body; ?>">
     <header>
         <div class="inner-header">
-            <a href="../index.php">
-                <img id="logo" src="images/php.png" alt="logo"></img></a>
+            <a href="../index.php"><img id="logo" src="images/php.png" alt="logo">
+                </img></a>
                     <nav>
                         <ul>
                             <?php echo make_links($nav);?>

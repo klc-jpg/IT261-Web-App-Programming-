@@ -23,7 +23,7 @@
             <!---end main_text--->
         </main>
         <!---end main--->
-        <aside>
+        <aside class="main_aside">
             <div class="aside_text">
                 <h3>Here's an example of a size three headline for this lovely aside</h3>
                 <p>

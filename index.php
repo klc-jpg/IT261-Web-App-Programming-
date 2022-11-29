@@ -24,7 +24,7 @@
                     <li><a href="adder.php">TROUBLESHOOT</a></li>
                     <li><a href="calculator.php">CALCULATOR</a></li>
                     <li><a href="website/contact.php">EMAIL</a></li>
-                    <li><a href="">DATABASE</a></li>
+                    <li><a href="website/cities.php">DATABASE</a></li>
                     <li><a href="website/gallery.php">GALLERY</a></li>
                 </ul>
             </nav>

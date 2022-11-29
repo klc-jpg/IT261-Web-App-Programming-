@@ -56,6 +56,28 @@ nav li {
     background-color: #FBF7F4;
 }
 
+#wrapper-city {
+    max-width: 1200px;
+    width: 98%;
+    margin: 20px auto;
+    clear: both;
+    overflow: hidden;
+    background-color: #FBF7F4;
+    padding: 1%;
+}
+
+main.city-main {
+    display: block;
+    float: left;
+    width: 45%;
+}
+
+main.city-view-main {
+    display: block;
+    float: left;
+    width: 62%;
+}
+
 div #home_hero {
     margin-bottom: 20px;
     max-width: 100%;
@@ -156,7 +178,11 @@ div.aside_text ul {
     list-style-type: none;
 }
 
-aside:not(.aside_daily) {
+
+/*aside:not(aside.aside_daily),
+aside:not(aside.city-aside)*/
+
+aside.main_aside {
     display: block;
     position: relative;
     width: 35%;
@@ -165,6 +191,20 @@ aside:not(.aside_daily) {
     border-radius: 3px;
     border: 3.5px solid #392e3a;
     padding: 5%;
+}
+
+aside#city-aside {
+    display: inline;
+    float: right;
+    width: 45%;
+    height: auto;
+}
+
+aside#city-view-aside {
+    display: inline;
+    float: right;
+    width: 35%;
+    height: auto;
 }
 
 .aside_daily {
@@ -179,7 +219,7 @@ aside:not(.aside_daily) {
     margin: 0 0 0 11%;
 }
 
-aside::before,
+.main_aside::before,
 .aside_daily::before {
     content: "";
     background-color: #897DA5;
@@ -258,7 +298,11 @@ h1.thx {
 }
 
 footer,
-p {
+p,
+ul.city li,
+ul.city li a,
+ul.details li,
+ul.details li a {
     color: #392e3a;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 400;
@@ -535,4 +579,77 @@ td.np {
 
 #parks h1 {
     text-align: center;
+}
+
+
+/*city pages style*/
+
+p a:link,
+p a:visited {
+    color: #392e3a;
+}
+
+.heading,
+.about {
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.about h1 {
+    margin: 1% 0 0 2%;
+}
+
+img.city {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+img.aside-image {
+    display: block;
+    margin: 4% auto 2% auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+ul.city li {
+    margin-left: 10px;
+}
+
+ul.details {
+    margin-top: 20px;
+}
+
+ul.details li {
+    line-height: 1.6;
+}
+
+aside ul li,
+aside figcaption {
+    text-decoration: none;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #392e3a;
+}
+
+main.aboutDB {
+    width: 95%;
+    margin: 1% 2.5%;
+    border: 3px solid #392e3a;
+    padding: 2%;
+    border-radius: 3px;
+}
+
+img.database {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: cover;
 }

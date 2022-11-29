@@ -1,6 +1,8 @@
 <?php
 ob_start();
 
+include('credentials.php'); 
+
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 switch(THIS_PAGE) {
@@ -10,7 +12,7 @@ switch(THIS_PAGE) {
     break;
 
     case 'about.php';
-    $title = 'website project about page';
+    $title = 'about page';
     $body = 'about inner';
     break;
 
@@ -19,8 +21,13 @@ switch(THIS_PAGE) {
     $body = 'daily inner';
     break;
 
-    case 'project.php';
-    $title = 'website project page';
+    case 'cities.php';
+    $title = 'cities page';
+    $body = 'project inner';
+    break;
+
+    case 'city-view.php';
+    $title = 'city-view page';
     $body = 'project inner';
     break;
 
@@ -45,7 +52,7 @@ $nav = array(
     'index.php' => 'HOME',
         'about.php' => 'ABOUT',
             'daily.php' => 'DAILY',
-                'project.php' => 'PROJECT',
+                'cities.php' => 'PROJECT',
                     'contact.php' => 'CONTACT',
                         'gallery.php' => 'GALLERY',
 );  
@@ -294,6 +301,46 @@ $parks['Bryce_Canyon'] = 'bryce_Located in Utah, established 1928.';
 $parks['Joshua_Tree'] = 'joshu_Located in California, established 1994.';
 $parks['Olympic_NP'] = 'olymp_Located in Washington, established 1938.';
 $parks['Yellowstone_NP'] = 'yello_Located in Montana, Wyoming and Idaho; established 1919.';
+
+define('DEBUG', 'TRUE');  // We want to see our errors
+function myError($myFile, $myLine, $errorMsg)
+{
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+}
+
+
+$pics[0] = 'world1';
+$pics[1] = 'world2';
+$pics[2] = 'world3';
+
+
+$i = rand(0,2);
+$selected_pic = ''.$pics[$i].'.png';
+
+function rando_images($pics) {
+    $my_return = '';
+    $i = rand(0,2);
+    $selected_pic = ''.$pics[$i].'.png';
+    $my_return = 'src="./images/'.$selected_pic.'" alt="'.$pics[$i].'" ';
+    return $my_return;
+}//end
+
+
+
+
+
+
+
+
+
 
 ?>
 
