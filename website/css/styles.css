@@ -178,10 +178,6 @@ div.aside_text ul {
     list-style-type: none;
 }
 
-
-/*aside:not(aside.aside_daily),
-aside:not(aside.city-aside)*/
-
 aside.main_aside {
     display: block;
     position: relative;

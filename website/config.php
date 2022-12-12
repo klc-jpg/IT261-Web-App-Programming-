@@ -316,7 +316,6 @@ if(defined('DEBUG') && DEBUG)
   }
 }
 
-
 $pics[0] = 'world1';
 $pics[1] = 'world2';
 $pics[2] = 'world3';
@@ -332,16 +331,6 @@ function rando_images($pics) {
     $my_return = 'src="./images/'.$selected_pic.'" alt="'.$pics[$i].'" ';
     return $my_return;
 }//end
-
-
-
-
-
-
-
-
-
-
 ?>
 
 

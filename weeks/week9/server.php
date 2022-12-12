@@ -6,17 +6,19 @@ session_start();
 include('config.php');
 //eventually header include goes here
 //include('./includes/header.php');
-//this is where server.php communicates with the database
 
+//this is where server.php communicates with the database
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myError(__FILE__,__LINE__,mysqli_connect_error()));
+
 // register user using if(isset)
 if(isset($_POST['reg_user'])) {
     $first_name = mysqli_real_escape_string($iConn, $_POST['first_name']);
     $last_name = mysqli_real_escape_string($iConn, $_POST['last_name']);
     $email = mysqli_real_escape_string($iConn, $_POST['email']);
     $username = mysqli_real_escape_string($iConn, $_POST['username']);
-    $password_1 = mysqli_real_escape_string($iConn, $_POST['password_1']);
+    $password = mysqli_real_escape_string($iConn, $_POST['password']);
     $password_2 = mysqli_real_escape_string($iConn, $_POST['password_2']);
+
 //make sure all input fields are not empty
 //if empty we are going to use a new function called array_push()
 if(empty($first_name)) {
@@ -31,14 +33,14 @@ if(empty($email)) {
 if(empty($username)) {
     array_push($errors, 'Username is required!');
 }
-if(empty($password_1)) {
+if(empty($password)) {
     array_push($errors, 'Password is required!');
 }
-if($password_1 !== $password_2) {// LOGIC = is password_1 !== password_2
+if($password !== $password_2) {// LOGIC = is password_1 !== password_2
     array_push($errors, 'Passwords do not match!');
 }
-// check the username and password AND selecting it from the table
 
+// check the username and password AND selecting it from the table
 $user_check_query = "SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1 ";
 
 $result = mysqli_query($iConn, $user_check_query) or die(myError(__FILE__,__LINE__,mysqli_error($iConn)));
@@ -58,7 +60,7 @@ if($rows) {
 //now we count errors
 if(count($errors) == 0 ) {
 //if errors == 0 we take empty function and assign to new var $password
-$password = md5($password_1);
+$password = md5($password);
 //now we insert information into the table
 $query = "INSERT INTO users (first_name, last_name, email, username, password) VALUES ('$first_name', '$last_name', '$email', '$username', '$password') "; 
 
@@ -86,7 +88,7 @@ if(isset($_POST['login_user'])) {
     }
 //count errors again
     if(count($errors) == 0 ) {
-        $password = md5($password_1);
+        $password = md5($password);
         $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
         $results = mysqli_query($iConn, $query);
 

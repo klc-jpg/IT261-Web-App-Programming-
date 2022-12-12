@@ -1,0 +1,260 @@
+/*styles for login/reg week 9*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    height: 150px;
+    padding: 1%;
+    position: relative;
+    border: 2.5px solid #392e3a;
+}
+
+header::before {
+    content: "";
+    background-color: #008b8b;
+    opacity: 0.75;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.success {
+    display: block;
+    float: left;
+    margin-left: 5%;
+    margin-top: 25px;
+    width: 200px;
+    position: relative;
+}
+
+.welcome_logout {
+    display: block;
+    float: right;
+    margin-right: 5%;
+    margin-top: 20px;
+    width: 200px;
+    position: relative;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+#wrapper {
+    max-width: 1200px;
+    width: 98%;
+    margin: 30px auto;
+    clear: both;
+    padding: 1%;
+    overflow: hidden;
+    background-color: #FBF7F4;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form {
+    max-width: 580px;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+fieldset {
+    display: block;
+    position: relative;
+    height: auto;
+    border-radius: 3px;
+    padding: 5%;
+    border: 3px solid #392e3a;
+    margin: 0 auto;
+}
+
+form.sign::before {
+    content: "";
+    background-color: #EDBB68;
+    opacity: 0.75;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+}
+
+form.reg::before {
+    content: "";
+    background-color: #897DA5;
+    opacity: 0.75;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin: 0 auto 15px auto;
+    padding: 0 2%;
+    border-radius: 3px;
+    border: 2px solid #392e3a;
+}
+
+form label {
+    display: block;
+    margin: 0 auto 2px 10%;
+    color: #392e3a;
+    font-size: 1.1em;
+}
+
+button:not(.logout),
+input[type=submit],
+input[type=button] {
+    display: inline;
+    padding: 1.5%;
+    background-color: #ffffff;
+    width: 20%;
+    border: 2px solid #392e3a;
+    border-radius: 3px;
+}
+
+button.logout {
+    display: block;
+    padding: 3%;
+    background-color: #ffffff;
+    width: 50%;
+    border: 2px solid #392e3a;
+    border-radius: 3px;
+    position: relative;
+}
+
+p.logout_button {
+    width: 100%;
+    margin: 5px 0;
+    position: relative;
+}
+
+.buttons {
+    display: inline;
+    margin-left: 10%;
+}
+
+button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+    transform: scale(0.97);
+    transition: 0.3s;
+}
+
+footer {
+    height: 60px;
+    line-height: 60px;
+    background: #FBF7F4;
+    clear: both;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    display: flex;
+    justify-content: center;
+    margin: 0 15px;
+    list-style-type: none;
+}
+
+
+/*Typography*/
+
+h1,
+h2,
+h3,
+h4,
+input[type=submit],
+input[type=button],
+label,
+div.error p,
+.welcome_logout p {
+    text-decoration: none;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+input[type=submit],
+input[type=button],
+label {
+    color: #392e3a;
+}
+
+input[type=submit],
+input[type=button] {
+    font-size: 1.1em;
+}
+
+footer,
+p:not(p.error, .welcome_logout p) {
+    color: #392e3a;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 400;
+}
+
+ul li a,
+p a,
+ul li a:link,
+p a:visited {
+    color: #392e3a;
+}
+
+.welcome_logout p a {
+    text-decoration: none;
+}
+
+body a:hover:not(p.logout_button a),
+footer a:hover,
+footer li a:hover {
+    color: #CCC;
+}
+
+div.error p {
+    color: #d9381e;
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0 auto;
+}
